@@ -1,0 +1,123 @@
+body {
+    background: linear-gradient(140deg, rgb(0, 0, 0), rgb(0, 0, 255), rgb(0, 0, 0));
+    background-color: white;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0vw;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#backer {
+    height: 100%;
+    position: fixed;
+    width: 80%;
+    margin-left: 20%;
+    background-color: white;
+    z-index: -1
+}
+
+#head_hold {
+    width:  80%;
+    height:  100%;
+    margin-left: 20%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#indexer {
+    width:  2%;
+    height: 60%;
+    top: 50%;
+    left: 3.7%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    border-radius: 10px;
+}
+
+#index {
+    width: 20%;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 10vw;
+    color: black;
+}
+
+.welctf {
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    display: grid;
+    align-items: center;
+    grid-row-gap: 0px;
+}
+
+.surround {
+    position: absolute;
+    width: 75%;
+    height: 95%;
+    margin-left: 12.5%;
+    background-color: rgb(255, 255, 230);
+    box-shadow: rgb(235, 235, 235) 0px 5px 5px 5px;
+    z-index: -1;
+    border-radius: 4%;
+}
+
+#welc {
+    font-size: 7vw;
+    font-family: 'Tangerine', cursive;
+    color: black;
+    font-weight: bold;
+    margin-left: 20%;
+    margin-top: 0%;
+}
+
+#info {
+    width: 40%;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    margin-left: 21%;
+    margin-top: -15%;
+    font-size: 1.6vw;
+}
+
+#quote {
+    font-family: 'Montserrat Alternates', cursive;
+    color: black;
+    font-size: 1.6vw;
+}
+
+button {
+    position: absolute;
+    margin-left: 40%;
+    margin-top: -10%;
+    font-size: 2vw;
+    border: none;
+    border-radius: 3%;
+    width: 30%;
+    height: 10%;
+    background-color: white;
+    box-shadow: rgb(235, 235, 235) 0px 5px 5px 5px;
+    color: black;
+    font-family: "Montserrat Alternates", sans-serif;
+    cursor: pointer;
+}
