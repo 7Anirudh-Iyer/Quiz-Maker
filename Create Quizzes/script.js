@@ -38,10 +38,11 @@ $('document').ready(()=>{
 	})
 })
 
-if (type === "mcq") {
-	console.log('oj..')
-	$("#newq").click(()=>{
-		console.log("happened")
+$("#newq").click(()=>{
+	db.ref("Quizzes/Quiz"+noQ+"/").update({
+		name: $("#namer").val()
+	})
+	if (type === "mcq") {
 		let q = $("#q").val()
 		let o1 = $("#o1").val()
 		let o2 = $("#o2").val()
@@ -68,9 +69,30 @@ if (type === "mcq") {
 		$("#o3").val("")
 		$("#o4").val("")
 		$("#correct").val("")
-	})
+	} else if (type == "qna"){
+		let q = $("#q1").val()
+		let ans = $("#ans").text()
+		let correct = $("#correct").val()
+		db.ref("Quizzes/Quiz"+noQ).update({
+			type: type,
+			numQs: nq
+		})	
+		db.ref("Quizzes/Quiz"+noQ+"/"+nq).update({
+			question: q,
+			correct: ans
+		})
+		nq+=1
+		$("#qno").text("Question "+nq)
+		$("#q1").val("")
+		$("#ans").text("")
+	}
+})
 
-	$("#submit").click(()=>{
+$("#submit").click(()=>{
+	db.ref("Quizzes/Quiz"+noQ).update({
+		name: $("#namer").val()
+	})
+	if(type === "mcq"){
 		let q = $("#q").val()
 		let o1 = $("#o1").val()
 		let o2 = $("#o2").val()
@@ -89,10 +111,9 @@ if (type === "mcq") {
 			option4: o4,
 			correct: correct
 		})
+		alert("Your quiz has been published")
 		location.href="../index.html"
-	})
-} else if (type === "qna") {
-	$("#newq").click(()=>{
+	} else if (type == "qna"){
 		let q = $("#q1").val()
 		let ans = $("#ans").text()
 		let correct = $("#correct").val()
@@ -104,24 +125,8 @@ if (type === "mcq") {
 			question: q,
 			correct: ans
 		})
-		nq+=1
-		$("#qno").text("Question "+nq)
-		$("#q").val("")
-		$("#ans").text("")
-	})
+		alert("Your quiz has been published")
+		location.href="../index.html"
+	}
+})
 
-	$("#submit").click(()=>{
-		let q = $("#q1").val()
-		let ans = $("#ans").text()
-		let correct = $("#correct").val()
-		db.ref("Quizzes/Quiz"+noQ).update({
-			type: type,
-			numQs: nq
-		})	
-		db.ref("Quizzes/Quiz"+noQ+"/"+nq).update({
-			question: q,
-			correct: ans
-		})
-		location.href="../index.html"
-	})
-}
