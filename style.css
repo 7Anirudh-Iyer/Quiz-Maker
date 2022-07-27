@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(140deg, rgb(0, 0, 0), rgb(0, 0, 255), rgb(0, 0, 0));
+    background: linear-gradient(140deg, rgb(0, 0, 0), rgb(0, 0, 255), rgb(200, 0, 0), rgb(0, 0, 0));
     background-color: white;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -34,6 +34,16 @@ a {
     align-items: center;
 }
 
+#cool {
+    position: absolute;
+    transform: rotateZ(180deg);
+    width: auto;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
 #indexer {
     width:  2%;
     height: 60%;
@@ -58,8 +68,18 @@ a {
 
 h1 {
     font-family: 'Tangerine', cursive;
-    font-size: 10vw;
+    font-size: 8vw;
     color: black;
+}
+
+.main {
+    font-family: 'Assistant', sans-serif;
+    width: 40%;
+    font-size: 2vw;
+    position: absolute;
+    margin-left: 10%;
+    text-align: center;
+    margin-top: 10%;
 }
 
 .welctf {
@@ -82,28 +102,30 @@ h1 {
     border-radius: 4%;
 }
 
-#welc {
+.welc {
     font-size: 7vw;
     font-family: 'Tangerine', cursive;
     color: black;
     font-weight: bold;
     margin-left: 20%;
     margin-top: 0%;
+    display: none;
 }
 
-#info {
+.info {
     width: 40%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Edu NSW Act Foundation', sans-serif;
     color: black;
     margin-left: 21%;
     margin-top: -15%;
     font-size: 1.6vw;
+    display: none;
 }
 
 #quote {
-    font-family: 'Montserrat Alternates', cursive;
+    font-family: 'Roboto', serif;
     color: black;
-    font-size: 1.6vw;
+    font-size: 1.4vw;
 }
 
 button {
@@ -120,4 +142,10 @@ button {
     color: black;
     font-family: "Montserrat Alternates", sans-serif;
     cursor: pointer;
+}
+
+button:hover {
+    box-shadow: rgb(215, 215, 215) 0px 5px 5px 5px;
+    transition-duration: 1s;
+    transform: scaleX(1.04);
 }

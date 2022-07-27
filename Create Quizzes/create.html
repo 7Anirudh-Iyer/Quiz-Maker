@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>Create a Quiz</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+		<script type="module">
+			const firebaseConfig = {
+				apiKey: "AIzaSyDvk59LI_-PAQIjgYWcSQFo34J5ZnaBsPQ",
+				authDomain: "flair-4db8d.firebaseapp.com",
+				databaseURL: "https://flair-4db8d-default-rtdb.firebaseio.com",
+				projectId: "flair-4db8d",
+				storageBucket: "flair-4db8d.appspot.com",
+				messagingSenderId: "796140415163",
+				appId: "1:796140415163:web:5e3d367a3872b74369219e"
+			};
+
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+		</script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Edu+NSW+ACT+Foundation:wght@500&family=Montserrat+Alternates&family=Tangerine&family=Edu+TAS+Beginner&apercu+pro&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="create.css">
+		<script type="text/javascript" src="script.js" defer></script>
+	</head>
+	<body>
+		<h1>Flair - Create Quiz</h1>
+		<h1 style=" position: absolute;margin-left: 45%; margin-top: -5%" id="qno">Question </h1>
+		<div id="qnaire">
+			<div id="multiple_choice">
+				<div id="question">
+					<input id="q" placeholder="Enter your question" type="text"/>
+				</div>
+				<div id="options">
+					<ol>
+						<li><input placeholder="Option 1" type="text" id="o1" class="option" /></li>
+						<li><input placeholder="Option 2" type="text" id="o2" class="option" /></li>
+						<li><input placeholder="Option 3" type="text" id="o3" class="option" /></li>
+						<li><input placeholder="Option 4" type="text" id="o4" class="option"/></li>
+						<input type="text" placeholder="Enter correct option number" id="correct" class="option">
+					</ol>
+				</div>	
+			</div>
+			<div id="questions_and_answers">
+				<div id="question">
+					<input id="q1" placeholder="Enter your question" type="text"/>
+				</div>
+				<div contenteditable="true" placeholder="Enter correct ans" class="option" style="margin-left: 10%; height: 50%;max-height: 50%; overflow: auto;" id="ans"></div>
+				<p style="margin-left: 40%; font-family: 'Assistant', sans-serif;">Enter correct answer in blank above</p>
+			</div>
+		</div>
+		<pre title="Add Question" id="newq">  +  </pre>
+		<input type="button" value="Finish Quiz" id="submit"/>
+		<dialog class="choose">
+			<div id="modal_contents">
+				<img class="diimg" id="mcq" src="https://png.pngtree.com/element_our/png_detail/20181205/list-vector-icon-png_256685.jpg"/>
+				<img class="diimg" id="wa" src="https://icons.veryicon.com/png/o/education-technology/blue-gray-solid-blend-icon/questions-and-answers-6.png">
+			</div>
+		</dialog>
+	</body>
+</html>
