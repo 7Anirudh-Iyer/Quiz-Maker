@@ -46,4 +46,7 @@ $(document).ready(()=>{
 	$("#create").click(()=>{
 		location.href = "./Create Quizzes/create.html"
 	})
+	$("#play").click(()=>{
+		location.href = "./View Quizzes/view.html"
+	})
 })
